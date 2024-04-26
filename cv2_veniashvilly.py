@@ -1,7 +1,8 @@
 import cv2
 import numpy as np
 video_path = "C:/Users/mrtar/Downloads/video5206659230827826017 (1).mp4"
-
+check_github = 1000000
+# Это сделал Вениашвиль
 cap = cv2.VideoCapture(video_path)
 cv2.namedWindow('frame')
 kernel = np.ones((5,5), np.uint8)
@@ -57,11 +58,3 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-
-
-
-
-
-
-
-
