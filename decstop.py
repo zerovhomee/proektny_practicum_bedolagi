@@ -1,5 +1,5 @@
 from tkinter import *
-from cv2_veniashvilly import main
+from cv2_veniashvilly import f
 import sys
 
 
@@ -9,23 +9,26 @@ class Main:
 
     def window(self):
         window = Tk()
+        window["bg"] = "gray"
         window.title('Сard recognition')
-        window.geometry('400x300')
+        window.geometry('500x500')
 
-        frame = Frame( window, padx = 10, pady = 10 )
-        frame.pack(expand=True)
+        frame = Frame(window, padx = 100, pady = 200)
+        frame.grid(column = 1)
 
-        lbl_name = Label(frame, text='Card recognition App')
-        lbl_name.grid(row = 1, column = 2)
+        lbl_name = Label(frame, text = 'Card recognition App')    #Ы   
+        lbl_name.grid(row = 0, column = 0, sticky = N)       
 
-        btn_start = Button(frame, text='Начать сканирование', command = main)
-        btn_start.grid(row = 5 , column = 2)
+        btn_start = Button(frame, text='Начать сканирование', command = f)        
+        btn_start.grid(row = 30, column = 0)
+        
 
-        btn_instruction = Button(frame, text='Инструкция по использованию', command = self.calculate)
-        btn_instruction.grid(row = 8 , column = 2)
+        btn_instruction = Button(frame, text='Инструкция по использованию', command = self.calculate)       
+        btn_instruction.grid(row = 50 , column = 0)
 
-        btn_quit = Button(frame, text='Выйти', command = sys.exit)
-        btn_quit.grid(row = 10 , column = 2)
+
+        btn_quit = Button(frame, text='Выйти', command = sys.exit)        
+        btn_quit.grid(row = 70 , column = 0)
 
 
         window.mainloop()
