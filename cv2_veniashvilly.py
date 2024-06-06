@@ -7,7 +7,7 @@ def process_live_feed_yolo(model, show_video=True):
         raise Exception("Ошибка: Не удалось открыть веб-камеру.")
     fps = int(cap.get(cv2.CAP_PROP_FPS))
     frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-    frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))#Ы
+    frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
     while cap.isOpened():
         success, frame = cap.read()
